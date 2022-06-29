@@ -20,7 +20,7 @@ GamePlay::~GamePlay()
 }
 void GamePlay::Init()
 {
-    context->assets->AddTexture(background, "assets/textures/anyer.jpg");
+    context->assets->AddTexture(background, "assets/textures/back.PNG");
     BACKGROUND.setTexture(context->assets->GetTexture(background));
     BACKGROUND.setTextureRect(context->window->getViewport(context->window->getDefaultView()));
 
