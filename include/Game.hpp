@@ -11,7 +11,8 @@ enum AssetID
     my,
     background,
     SNAKE,
-    s
+    s,
+    BORDER
 };
 
 struct Context 

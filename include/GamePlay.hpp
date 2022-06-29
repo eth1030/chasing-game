@@ -13,7 +13,8 @@ class GamePlay : public GameEngine::GameState
     std::shared_ptr<Context> context;
     sf::Sprite BACKGROUND;
     Snake m_snake;
-    
+    std::array<sf::Sprite, 4> walls;
+
     sf::Vector2f m_snakeDirection;
     sf::Time m_elapsedTime;
     sf::Sprite snek;

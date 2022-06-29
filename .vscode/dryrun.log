@@ -1,0 +1,5 @@
+make --dry-run --keep-going --print-directory
+make: Entering directory '/home/ece/Desktop/polkadot_ec327finalproject'
+g++ -Wall -Wextra -std=c++17 -ggdb -Iinclude -Llib src/AssetManager.cpp src/Game.cpp src/StateManager.cpp src/main.cpp src/player.cpp -o bin/main -lsfml-graphics -lsfml-window -lsfml-system -lsfml-audio
+make: Leaving directory '/home/ece/Desktop/polkadot_ec327finalproject'
+ 

@@ -1,0 +1,375 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+# GNU Make 4.3
+ 
+# Built for x86_64-pc-linux-gnu
+ 
+# Copyright (C) 1988-2020 Free Software Foundation, Inc.
+ 
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+ 
+# This is free software: you are free to change and redistribute it.
+ 
+# There is NO WARRANTY, to the extent permitted by law.
+ 
+
+ 
+# Make data base, printed on Tue Jun 28 18:50:14 2022
+ 
+
+# Variables
+
+# environment
+GDK_BACKEND = x11
+# environment
+LC_ALL = C
+# makefile (from 'Makefile', line 5)
+SRC := src
+# environment
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-aee94755-12c4-4fb3-bdb5-74cf495be79d.sock
+# environment
+VSCODE_CWD = /home/ece
+# environment
+GDM_LANG = en_US
+# default
+MAKE_COMMAND := make
+# environment
+QT_ACCESSIBILITY = 1
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# default
+.VARIABLES := 
+# environment
+PWD = /home/ece/Desktop/polkadot_ec327finalproject
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# environment
+XDG_DATA_DIRS = /usr/share/xubuntu:/usr/share/xfce4:/usr/local/share:/usr/share:/var/lib/snapd/desktop:/usr/share
+# environment
+OLDPWD = /home/ece
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# environment
+VSCODE_LOG_STACK = false
+# automatic
+%F = $(notdir $%)
+# environment
+CONDA_PROMPT_MODIFIER = (base) 
+# environment
+VSCODE_CODE_CACHE_PATH = /home/ece/.config/Code/CachedData/30d9c6cd9483b2cc586687151bcbcd635f373630
+# environment
+XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session0
+# environment
+LANG = C
+# environment
+XAUTHORITY = /home/ece/.Xauthority
+# default
+.LOADED := 
+# default
+.INCLUDE_DIRS = /usr/local/include /usr/include /usr/include
+# makefile
+MAKEFLAGS = pqrR
+# makefile
+CURDIR := /home/ece/Desktop/polkadot_ec327finalproject
+# environment
+VSCODE_PIPE_LOGGING = true
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# environment
+MFLAGS = -pqrR
+# environment
+SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
+# default
+.SHELLFLAGS := -c
+# environment
+XDG_CONFIG_DIRS = /etc/xdg/xdg-xubuntu:/etc/xdg:/etc/xdg
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# environment
+XDG_SESSION_DESKTOP = xubuntu
+# makefile (from 'Makefile', line 1)
+MAKEFILE_LIST := Makefile
+# environment
+CONDA_SHLVL = 1
+# automatic
+@F = $(notdir $@)
+# environment
+VSCODE_VERBOSE_LOGGING = true
+# environment
+VSCODE_PID = 11576
+# environment
+XDG_SESSION_TYPE = x11
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# environment
+CLUTTER_BACKEND = x11
+# environment
+CONDA_PYTHON_EXE = /home/ece/miniconda3/bin/python
+# environment
+SESSION_MANAGER = local/ece-VirtualBox:@/tmp/.ICE-unix/789,unix/ece-VirtualBox:/tmp/.ICE-unix/789
+# automatic
+*F = $(notdir $*)
+# environment
+QT_QPA_PLATFORMTHEME = gtk2
+# environment
+CHROME_DESKTOP = code-url-handler.desktop
+# environment
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
+# makefile (from 'Makefile', line 7)
+LIB := lib
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# environment
+VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
+# makefile (from 'Makefile', line 6)
+INCLUDE := include
+# default
+MAKE_HOST := x86_64-pc-linux-gnu
+# environment
+CONDA_PREFIX = /home/ece/miniconda3
+# makefile
+SHELL = /bin/sh
+# default
+MAKECMDGOALS := all
+# environment
+SHLVL = 0
+# environment
+MAKELEVEL := 0
+# default
+MAKE = $(MAKE_COMMAND)
+# environment
+PATH = /home/ece/miniconda3/bin:/home/ece/miniconda3/condabin:.:/home/ece/bin:/home/ece/miniconda3/bin:/home/ece/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+# default
+MAKEFILES := 
+# environment
+LANGUAGE = en_US
+# automatic
+^F = $(notdir $^)
+# environment
+VSCODE_LOG_NATIVE = false
+# automatic
+?F = $(notdir $?)
+# environment
+XDG_SEAT = seat0
+# environment
+XDG_CURRENT_DESKTOP = XFCE
+# automatic
++F = $(notdir $+)
+# environment
+XDG_SEAT_PATH = /org/freedesktop/DisplayManager/Seat0
+# environment
+DESKTOP_SESSION = xubuntu
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = XFCE
+# 'override' directive
+GNUMAKEFLAGS := 
+# environment
+CONDA_DEFAULT_ENV = base
+# environment
+LOGNAME = ece
+# environment
+XDG_VTNR = 7
+# makefile
+.DEFAULT_GOAL := all
+# environment
+DISPLAY = :0.0
+# environment
+USER = ece
+# default
+MAKE_VERSION := 4.3
+# makefile (from 'Makefile', line 10)
+EXECUTABLE := main
+# makefile (from 'Makefile', line 2)
+CXX_FLAGS := -Wall -Wextra -std=c++17 -ggdb
+# environment
+_ = /usr/share/code/code
+# makefile (from 'Makefile', line 4)
+BIN := bin
+# environment
+XDG_RUNTIME_DIR = /run/user/1000
+# environment
+GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
+# environment
+_CE_M = 
+# environment
+GTK_OVERLAY_SCROLLING = 0
+# environment
+XDG_SESSION_CLASS = user
+# makefile (from 'Makefile', line 9)
+LIBRARIES := -lsfml-graphics -lsfml-window -lsfml-system -lsfml-audio
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# environment
+HOME = /home/ece
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# environment
+VSCODE_IPC_HOOK = /run/user/1000/vscode-18ca2f75-1.68.1-main.sock
+# environment
+XDG_SESSION_ID = c1
+# default
+.RECIPEPREFIX := 
+# automatic
+<F = $(notdir $<)
+# default
+SUFFIXES := 
+# environment
+XDG_GREETER_DATA_DIR = /var/lib/lightdm-data/ece
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync check-symlink load
+# makefile (from 'Makefile', line 1)
+CXX := g++
+# environment
+XDG_MENU_PREFIX = xfce-
+# environment
+CONDA_EXE = /home/ece/miniconda3/bin/conda
+# environment
+_CE_CONDA = 
+# environment
+GDMSESSION = xubuntu
+# variable set hash-table stats:
+# Load=106/1024=10%, Rehash=0, Collisions=8/149=5%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# src (device 2051, inode 1715159): 7 files, no impossibilities.
+# . (device 2051, inode 1715140): 8 files, no impossibilities.
+
+# 15 files, no impossibilities in 2 directories.
+
+# Implicit Rules
+
+# No implicit rules.
+
+# Files
+
+# Not a target:
+src/Game.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-06-28 18:49:53.20244403
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/player.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-06-28 18:49:53.666445886
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2022-06-28 18:50:08.538505403
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/main.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-06-28 18:49:53.418444894
+#  File has been updated.
+#  Successfully updated.
+
+clean:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 23):
+	-rm $(BIN)/*
+
+# Not a target:
+src/StateManager.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-06-28 18:49:53.958447055
+#  File has been updated.
+#  Successfully updated.
+
+bin/main: src/AssetManager.cpp src/Game.cpp src/StateManager.cpp src/main.cpp src/player.cpp
+#  Implicit rule search has not been done.
+ 
+#  Implicit/static pattern stem: ''
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := bin/main
+# automatic
+# * := 
+# automatic
+# < := src/AssetManager.cpp
+# automatic
+# + := src/AssetManager.cpp src/Game.cpp src/StateManager.cpp src/main.cpp src/player.cpp
+# automatic
+# % := 
+# automatic
+# ^ := src/AssetManager.cpp src/Game.cpp src/StateManager.cpp src/main.cpp src/player.cpp
+# automatic
+# ? := src/AssetManager.cpp src/Game.cpp src/StateManager.cpp src/main.cpp src/player.cpp
+# automatic
+# | := 
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=6/18=33%
+#  recipe to execute (from 'Makefile', line 20):
+	$(CXX) $(CXX_FLAGS) -I$(INCLUDE) -L$(LIB) $^ -o $@ $(LIBRARIES)
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+all: bin/main
+#  Command line target.
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/8=0%
+
+run: clean all
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 16):
+	clear
+	./$(BIN)/$(EXECUTABLE)
+
+# Not a target:
+src/AssetManager.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-06-28 18:49:53.166443886
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+.SUFFIXES:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# files hash-table stats:
+# Load=12/1024=1%, Rehash=0, Collisions=0/34=0%
+# VPATH Search Paths
+
+# No 'vpath' search paths.
+
+# No general ('VPATH' variable) search path.
+
+# strcache buffers: 1 (0) / strings = 26 / storage = 262 B / avg = 10 B
+# current buf: size = 8162 B / used = 262 B / count = 26 / avg = 10 B
+
+# strcache performance: lookups = 42 / hit rate = 38%
+# hash-table stats:
+# Load=26/8192=0%, Rehash=0, Collisions=0/42=0%
+# Finished Make data base on Tue Jun 28 18:50:14 2022
+
+ 
