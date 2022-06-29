@@ -2,7 +2,6 @@
 #include "Chaser.hpp"
 #include <SFML/Window/Event.hpp>
 #include "gameover.hpp"
-#include "Chased.hpp"
 #include <SFML/Graphics/Texture.hpp>
 #include <SFML/Graphics/Sprite.hpp>
 #include <SFML/Graphics/Drawable.hpp>
@@ -18,6 +17,7 @@ GamePlay::~GamePlay()
 {
 
 }
+
 void GamePlay::Init()
 {
     context->assets->AddTexture(background, "assets/textures/back.PNG");
@@ -122,12 +122,12 @@ void GamePlay::ProcessInput()
                 break;
             }
 
-            if (std::abs(chaserDirection.x) != std::abs(newDirection.x) ||
-                std::abs(chaserDirection.y) != std::abs(newDirection.y))
-            {
-                chaserDirection = newDirection;
-            }
+        if (std::abs(chaserDirection.x) != std::abs(newDirection.x) ||
+            std::abs(chaserDirection.y) != std::abs(newDirection.y))
+        {
+            chaserDirection = newDirection;
         }
+    }
     }
 }
 
@@ -179,7 +179,9 @@ void GamePlay::Update(sf::Time deltaTime)
         }
 
 
+    }
 }
+
 void GamePlay::Draw()
 {
     context->window->clear();
@@ -190,7 +192,6 @@ void GamePlay::Draw()
         context->window->draw(wall);
     }
     context->window->draw(snek);
-    // context->window->draw(chased);
     context->window->display();
    
 }
