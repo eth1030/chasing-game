@@ -46,3 +46,4 @@ void Chaser::draw(sf::RenderTarget &target, sf::RenderStates states) const
         target.draw(piece);
     }
 }
+

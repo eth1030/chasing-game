@@ -27,7 +27,7 @@ void instructions::Init()
     // inTitle.setCharacterSize(92);
     
     // image
-    context->assets->AddTexture(sad, "assets/textures/instructions.png");
+    context->assets->AddTexture(sad, "assets/textures/finalinst.PNG");
     insprite.setTexture(context->assets->GetTexture(sad));
     // insprite.setScale(context->window->getSize().x/insprite.getLocalBounds().width, context->window->getSize().y/insprite.getLocalBounds().height);
     insprite.setOrigin(insprite.getLocalBounds().width/2,insprite.getLocalBounds().height/2);
