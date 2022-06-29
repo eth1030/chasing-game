@@ -3,6 +3,7 @@
 #include <SFML/Window/Event.hpp>
 #include <SFML/Window/Mouse.hpp>
 #include "GamePlay.hpp"
+#include "instructions.hpp"
 
 mainmenu::mainmenu(std::shared_ptr<Context> &context) 
     : context(context), isPlay(false), isExit(false),
@@ -22,7 +23,7 @@ void mainmenu::Init()
     // adding the font
     context->assets->AddFont(font, "assets/fonts/Anton-Regular.ttf"); 
     // add image
-    context->assets->AddTexture(my, "assets/textures/maxresdefault.jpg");
+    context->assets->AddTexture(my, "assets/textures/mainmenu.JPG");
     sprite.setTexture(context->assets->GetTexture(my));
     sprite.setScale(context->window->getSize().x/sprite.getLocalBounds().width, context->window->getSize().y/sprite.getLocalBounds().height);
     sprite.setOrigin(sprite.getLocalBounds().width/2,sprite.getLocalBounds().height/2);
@@ -30,7 +31,7 @@ void mainmenu::Init()
     
     // initializing title text
     title.setFont(context->assets->GetFont(font));
-    title.setString("Polka-Dot Game");
+    title.setString("Predator & Prey");
     title.setFillColor(sf::Color::Red);
     title.setPosition(context->window->getSize().x/2,
                       context->window->getSize().y/2 - 150.f);
@@ -51,12 +52,12 @@ void mainmenu::Init()
     exit.setOrigin(exit.getLocalBounds().width/2,exit.getLocalBounds().height/2);
     exit.setCharacterSize(45);
     // instructions
-    instructions.setFont(context->assets->GetFont(font));
-    instructions.setString("Instructions");
-    instructions.setPosition(context->window->getSize().x/2.22,
+    instructionsa.setFont(context->assets->GetFont(font));
+    instructionsa.setString("Instructions");
+    instructionsa.setPosition(context->window->getSize().x/2.22,
                       context->window->getSize().y/2 + 35);
-    instructions.setOrigin(instructions.getLocalBounds().width/2, instructions.getLocalBounds().height/2);
-    instructions.setCharacterSize(50);
+    instructionsa.setOrigin(instructionsa.getLocalBounds().width/2, instructionsa.getLocalBounds().height/2);
+    instructionsa.setCharacterSize(50);
     
 }
 
@@ -109,13 +110,17 @@ void mainmenu::ProcessInput()
                     isPlay = false;
                     isExit = false;
                     isInstructions = false;
-                    if (!isPlaySelected) 
+                    if (isPlaySelected) 
+                    {
+                        isExit = true;
+                    }
+                    else if (isExitSelected)
                     {
                         isPlay = true;
                     }
-                    else
+                    else if (isInstructionsSelected)
                     {
-                        isExit = true;
+                        isInstructions = true;
                     }
                     break;
                 }
@@ -135,19 +140,19 @@ void mainmenu::Update(sf::Time deltaTime)
     {
         play.setFillColor(sf::Color::Red);
         exit.setFillColor(sf::Color::Black);
-        instructions.setFillColor(sf::Color::Black);
+        instructionsa.setFillColor(sf::Color::Black);
     }
     else if(isExitSelected)
     {
         exit.setFillColor(sf::Color::Red);
         play.setFillColor(sf::Color::Black);
-        instructions.setFillColor(sf::Color::Black);
+        instructionsa.setFillColor(sf::Color::Black);
     }   
     else
     {
         exit.setFillColor(sf::Color::Black);
         play.setFillColor(sf::Color::Black);
-        instructions.setFillColor(sf::Color::Red);
+        instructionsa.setFillColor(sf::Color::Red);
     }
 
     if(isExit) { // actually is if play is selected
@@ -159,7 +164,7 @@ void mainmenu::Update(sf::Time deltaTime)
     }
     else if (isInstructions)
     {
-        
+        context->states->Add(std::make_unique<instructions>(context), true);
     }
     
 }
@@ -170,6 +175,6 @@ void mainmenu::Draw()
     context->window->draw(title);
     context->window->draw(play);
     context->window->draw(exit);
-    context->window->draw(instructions);
+    context->window->draw(instructionsa);
     context->window->display();
 }

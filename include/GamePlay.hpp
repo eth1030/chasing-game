@@ -5,19 +5,23 @@
 #include "Game.hpp"
 #include "GameState.hpp"
 #include <SFML/Graphics/Sprite.hpp>
-#include "Snake.hpp"
+#include "Chaser.hpp"
+// #include "Chased.hpp"
+// #include "snek.hpp"
 
 class GamePlay : public GameEngine::GameState
 {
     private:
     std::shared_ptr<Context> context;
     sf::Sprite BACKGROUND;
-    Snake m_snake;
+    Chaser chaser;
+    // Chased chased;
     std::array<sf::Sprite, 4> walls;
-
-    sf::Vector2f m_snakeDirection;
+    sf::Vector2f chaserDirection;
+    sf::Vector2f chasedDirection;
     sf::Time m_elapsedTime;
     sf::Sprite snek;
+    // Chased chased;
 
     public:
         GamePlay(std::shared_ptr<Context> &context);
@@ -27,6 +31,4 @@ class GamePlay : public GameEngine::GameState
         void ProcessInput() override;
         void Update(sf::Time deltaTime) override;
         void Draw() override;
-        void Pause() override;
-        void Start() override;
  };

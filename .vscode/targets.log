@@ -13,7 +13,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
  
 
  
-# Make data base, printed on Tue Jun 28 18:50:14 2022
+# Make data base, printed on Wed Jun 29 15:09:35 2022
  
 
 # Variables
@@ -25,7 +25,7 @@ LC_ALL = C
 # makefile (from 'Makefile', line 5)
 SRC := src
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-aee94755-12c4-4fb3-bdb5-74cf495be79d.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-f268c4a3-8eb7-460c-9ff3-c9a35332b9ee.sock
 # environment
 VSCODE_CWD = /home/ece
 # environment
@@ -57,7 +57,7 @@ VSCODE_LOG_STACK = false
 # environment
 CONDA_PROMPT_MODIFIER = (base) 
 # environment
-VSCODE_CODE_CACHE_PATH = /home/ece/.config/Code/CachedData/30d9c6cd9483b2cc586687151bcbcd635f373630
+VSCODE_CODE_CACHE_PATH = /home/ece/.config/Code/CachedData/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5
 # environment
 XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session0
 # environment
@@ -75,7 +75,7 @@ CURDIR := /home/ece/Desktop/polkadot_ec327finalproject
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
@@ -99,7 +99,7 @@ CONDA_SHLVL = 1
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 11576
+VSCODE_PID = 2228
 # environment
 XDG_SESSION_TYPE = x11
 # automatic
@@ -109,7 +109,7 @@ CLUTTER_BACKEND = x11
 # environment
 CONDA_PYTHON_EXE = /home/ece/miniconda3/bin/python
 # environment
-SESSION_MANAGER = local/ece-VirtualBox:@/tmp/.ICE-unix/789,unix/ece-VirtualBox:/tmp/.ICE-unix/789
+SESSION_MANAGER = local/ece-VirtualBox:@/tmp/.ICE-unix/888,unix/ece-VirtualBox:/tmp/.ICE-unix/888
 # automatic
 *F = $(notdir $*)
 # environment
@@ -207,9 +207,11 @@ HOME = /home/ece
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-VSCODE_IPC_HOOK = /run/user/1000/vscode-18ca2f75-1.68.1-main.sock
+VSCODE_IPC_HOOK = /run/user/1000/vscode-18ca2f75-1.67.2-main.sock
 # environment
 XDG_SESSION_ID = c1
+# environment
+PANEL_GDK_CORE_DEVICE_EVENTS = 0
 # default
 .RECIPEPREFIX := 
 # automatic
@@ -231,7 +233,7 @@ _CE_CONDA =
 # environment
 GDMSESSION = xubuntu
 # variable set hash-table stats:
-# Load=106/1024=10%, Rehash=0, Collisions=8/149=5%
+# Load=107/1024=10%, Rehash=0, Collisions=7/142=5%
 
 # Pattern-specific Variable Values
 
@@ -239,10 +241,10 @@ GDMSESSION = xubuntu
 
 # Directories
 
-# src (device 2051, inode 1715159): 7 files, no impossibilities.
-# . (device 2051, inode 1715140): 8 files, no impossibilities.
+# src (device 2051, inode 921985): 12 files, no impossibilities.
+# . (device 2051, inode 921965): 9 files, no impossibilities.
 
-# 15 files, no impossibilities in 2 directories.
+# 21 files, no impossibilities in 2 directories.
 
 # Implicit Rules
 
@@ -253,28 +255,35 @@ GDMSESSION = xubuntu
 # Not a target:
 src/Game.cpp:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-28 18:49:53.20244403
+#  Last modified 2022-06-29 10:46:40
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
-src/player.cpp:
+src/Chased.cpp:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-28 18:49:53.666445886
+#  Last modified 2022-06-29 11:20:58
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-28 18:50:08.538505403
+#  Last modified 2022-06-28 15:50:08
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 src/main.cpp:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-28 18:49:53.418444894
+#  Last modified 2022-06-28 16:44:52
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/player2.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-06-28 22:53:00
 #  File has been updated.
 #  Successfully updated.
 
@@ -285,40 +294,50 @@ clean:
 #  recipe to execute (from 'Makefile', line 23):
 	-rm $(BIN)/*
 
+ 
 # Not a target:
-src/StateManager.cpp:
+ 
+src/mainmenu.cpp:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-28 18:49:53.958447055
+#  Last modified 2022-06-29 10:46:22
 #  File has been updated.
 #  Successfully updated.
 
-bin/main: src/AssetManager.cpp src/Game.cpp src/StateManager.cpp src/main.cpp src/player.cpp
-#  Implicit rule search has not been done.
- 
-#  Implicit/static pattern stem: ''
-#  File does not exist.
+# Not a target:
+src/gameover.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-06-29 11:09:42
 #  File has been updated.
-#  Needs to be updated (-q is set).
-# automatic
-# @ := bin/main
-# automatic
-# * := 
-# automatic
-# < := src/AssetManager.cpp
-# automatic
-# + := src/AssetManager.cpp src/Game.cpp src/StateManager.cpp src/main.cpp src/player.cpp
-# automatic
-# % := 
-# automatic
-# ^ := src/AssetManager.cpp src/Game.cpp src/StateManager.cpp src/main.cpp src/player.cpp
-# automatic
-# ? := src/AssetManager.cpp src/Game.cpp src/StateManager.cpp src/main.cpp src/player.cpp
-# automatic
-# | := 
-# variable set hash-table stats:
-# Load=8/32=25%, Rehash=0, Collisions=6/18=33%
+#  Successfully updated.
+
+# Not a target:
+src/Chaser.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-06-29 10:33:42
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/StateManager.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-06-28 17:30:58
+#  File has been updated.
+#  Successfully updated.
+
+bin/main: src/AssetManager.cpp src/Chased.cpp src/Chaser.cpp src/Game.cpp src/GamePlay.cpp src/StateManager.cpp src/gameover.cpp src/main.cpp src/mainmenu.cpp src/player2.cpp
+#  Implicit rule search has not been done.
+#  Last modified 2022-06-29 11:21:14
+#  File has been updated.
+#  Successfully updated.
 #  recipe to execute (from 'Makefile', line 20):
 	$(CXX) $(CXX_FLAGS) -I$(INCLUDE) -L$(LIB) $^ -o $@ $(LIBRARIES)
+
+# Not a target:
+src/GamePlay.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-06-29 11:20:46
+#  File has been updated.
+#  Successfully updated.
 
 # Not a target:
 .DEFAULT:
@@ -331,9 +350,7 @@ all: bin/main
 #  Implicit rule search has been done.
 #  File does not exist.
 #  File has been updated.
-#  Needs to be updated (-q is set).
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/8=0%
+#  Successfully updated.
 
 run: clean all
 #  Implicit rule search has not been done.
@@ -346,30 +363,24 @@ run: clean all
 # Not a target:
 src/AssetManager.cpp:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-28 18:49:53.166443886
+#  Last modified 2022-06-28 16:45:14
 #  File has been updated.
 #  Successfully updated.
 
-# Not a target:
-.SUFFIXES:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
 # files hash-table stats:
-# Load=12/1024=1%, Rehash=0, Collisions=0/34=0%
+# Load=17/1024=2%, Rehash=0, Collisions=0/43=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 26 / storage = 262 B / avg = 10 B
-# current buf: size = 8162 B / used = 262 B / count = 26 / avg = 10 B
+# strcache buffers: 1 (0) / strings = 37 / storage = 414 B / avg = 11 B
+# current buf: size = 8162 B / used = 414 B / count = 37 / avg = 11 B
 
-# strcache performance: lookups = 42 / hit rate = 38%
+# strcache performance: lookups = 52 / hit rate = 28%
 # hash-table stats:
-# Load=26/8192=0%, Rehash=0, Collisions=0/42=0%
-# Finished Make data base on Tue Jun 28 18:50:14 2022
+# Load=37/8192=0%, Rehash=0, Collisions=0/52=0%
+# Finished Make data base on Wed Jun 29 15:09:35 2022
 
  

@@ -3,7 +3,7 @@
 #include <memory>
 
 #include <SFML/Graphics/Text.hpp>
-
+#include <SFML/Graphics.hpp>
 #include "GameState.hpp"
 #include "Game.hpp"
 
@@ -11,15 +11,16 @@ class gameover : public GameEngine::GameState
 {
 private:
     std::shared_ptr<Context> context;
-    sf::Text m_gameOverTitle;
-    sf::Text m_retryButton;
-    sf::Text m_exitButton;
+    sf::Text endTitle;
+    sf::Text endretry;
+    sf::Text endexit;
+    sf::Sprite endsprite;
 
-    bool m_isRetryButtonSelected;
-    bool m_isRetryButtonPressed;
+    bool endretrySelected;
+    bool endretryPressed;
 
-    bool m_isExitButtonSelected;
-    bool m_isExitButtonPressed;
+    bool endexitSelected;
+    bool endexitPressed;
 
 public:
     gameover(std::shared_ptr<Context> &context);

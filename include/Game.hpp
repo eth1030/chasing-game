@@ -10,9 +10,11 @@ enum AssetID
     font = 0,
     my,
     background,
-    SNAKE,
+    CHASER,
     s,
-    BORDER
+    BORDER,
+    sad,
+    CHASED
 };
 
 struct Context 

@@ -5,7 +5,7 @@
 
 Game::Game() : context(std::make_shared<Context>())
 {
-    context->window->create(sf::VideoMode(1000, 800), "Polka-Dot Game", sf::Style::Close);
+    context->window->create(sf::VideoMode(1000, 800), "Predator & Prey", sf::Style::Close);
     context->states->Add(std::make_unique<mainmenu>(context));
 }
 

@@ -27,11 +27,11 @@ GameEngine::StateManager::~StateManager()
         {
             stateStack.pop();
 
-            if (!stateStack.empty())
-            {
-                stateStack.top()->Start();
+            // if (!stateStack.empty())
+            // {
+            //     stateStack.top()->Start();
 
-            }
+            // }
 
             remove = false;
         }
@@ -44,14 +44,14 @@ GameEngine::StateManager::~StateManager()
                 replace = false;
             }
 
-            if (!stateStack.empty())
-            {
-                stateStack.top()->Pause();
-            }
+            // if (!stateStack.empty())
+            // {
+            //     stateStack.top()->Pause();
+            // }
 
             stateStack.push(std::move(newState));
             stateStack.top()->Init();
-            stateStack.top()->Start();
+            // stateStack.top()->Start();
             add = false;
         }
     }

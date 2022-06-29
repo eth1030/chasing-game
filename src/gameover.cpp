@@ -4,9 +4,9 @@
 #include <SFML/Window/Event.hpp>
 
 gameover::gameover(std::shared_ptr<Context> &context)
-    : context(context), m_isRetryButtonSelected(true),
-      m_isRetryButtonPressed(false), m_isExitButtonSelected(false),
-      m_isExitButtonPressed(false)
+    : context(context), endretrySelected(true),
+      endretryPressed(false), endexitSelected(false),
+      endexitPressed(false)
 {
 }
 
@@ -17,30 +17,38 @@ gameover::~gameover()
 void gameover::Init()
 {
     // Title
-    m_gameOverTitle.setFont(context->assets->GetFont(font));
-    m_gameOverTitle.setString("Game Over");
-    m_gameOverTitle.setOrigin(m_gameOverTitle.getLocalBounds().width / 2,
-                              m_gameOverTitle.getLocalBounds().height / 2);
-    m_gameOverTitle.setPosition(context->window->getSize().x / 2,
+    endTitle.setFont(context->assets->GetFont(font));
+    endTitle.setString("Game Over");
+    endTitle.setOrigin(endTitle.getLocalBounds().width / 2,
+                              endTitle.getLocalBounds().height / 2);
+    endTitle.setPosition(context->window->getSize().x / 2 - 100.f,
                                 context->window->getSize().y / 2 - 150.f);
-
+    endTitle.setFillColor(sf::Color::Red);
+    endTitle.setCharacterSize(92);
     // Play Button
-    m_retryButton.setFont(context->assets->GetFont(font));
-    m_retryButton.setString("Retry");
-    m_retryButton.setOrigin(m_retryButton.getLocalBounds().width / 2,
-                            m_retryButton.getLocalBounds().height / 2);
-    m_retryButton.setPosition(context->window->getSize().x / 2,
+    endretry.setFont(context->assets->GetFont(font));
+    endretry.setString("Replay");
+    endretry.setOrigin(endretry.getLocalBounds().width / 2,
+                            endretry.getLocalBounds().height / 2);
+    endretry.setPosition(context->window->getSize().x / 2,
                               context->window->getSize().y / 2 - 25.f);
-    m_retryButton.setCharacterSize(20);
+    endretry.setCharacterSize(50);
 
     // Exit Button
-    m_exitButton.setFont(context->assets->GetFont(font));
-    m_exitButton.setString("Exit");
-    m_exitButton.setOrigin(m_exitButton.getLocalBounds().width / 2,
-                           m_exitButton.getLocalBounds().height / 2);
-    m_exitButton.setPosition(context->window->getSize().x / 2,
-                             context->window->getSize().y / 2 + 25.f);
-    m_exitButton.setCharacterSize(20);
+    endexit.setFont(context->assets->GetFont(font));
+   endexit.setString("Exit");
+    endexit.setOrigin(endexit.getLocalBounds().width / 2,
+                           endexit.getLocalBounds().height / 2);
+    endexit.setPosition(context->window->getSize().x / 2,
+                             context->window->getSize().y / 2 + 50.f);
+    endexit.setCharacterSize(50);
+
+    // image
+    context->assets->AddTexture(sad, "assets/textures/end.jpg");
+    endsprite.setTexture(context->assets->GetTexture(sad));
+    endsprite.setScale(context->window->getSize().x/endsprite.getLocalBounds().width, context->window->getSize().y/endsprite.getLocalBounds().height);
+    endsprite.setOrigin(endsprite.getLocalBounds().width/2,endsprite.getLocalBounds().height/2);
+    endsprite.setPosition(context->window->getSize().x/2, context->window->getSize().y/2);
 }
 
 void gameover::ProcessInput()
@@ -58,34 +66,34 @@ void gameover::ProcessInput()
             {
             case sf::Keyboard::Up:
             {
-                if (!m_isRetryButtonSelected)
+                if (!endretrySelected)
                 {
-                    m_isRetryButtonSelected = true;
-                    m_isExitButtonSelected = false;
+                    endretrySelected = true;
+                    endexitSelected = false;
                 }
                 break;
             }
             case sf::Keyboard::Down:
             {
-                if (!m_isExitButtonSelected)
+                if (!endexitSelected)
                 {
-                    m_isRetryButtonSelected = false;
-                    m_isExitButtonSelected = true;
+                    endretrySelected = false;
+                    endexitSelected = true;
                 }
                 break;
             }
-            case sf::Keyboard::Return:
+            case sf::Keyboard::Enter:
             {
-                m_isRetryButtonPressed = false;
-                m_isExitButtonPressed = false;
+                endexitPressed = false;
+                endexitPressed = false;
 
-                if (m_isRetryButtonSelected)
+                if (endretrySelected)
                 {
-                    m_isRetryButtonPressed = true;
+                    endretryPressed = true;
                 }
                 else
                 {
-                    m_isExitButtonPressed = true;
+                    endexitPressed = true;
                 }
 
                 break;
@@ -101,22 +109,22 @@ void gameover::ProcessInput()
 
 void gameover::Update(sf::Time deltaTime)
 {
-    if (m_isRetryButtonSelected)
+    if (endretrySelected)
     {
-        m_retryButton.setFillColor(sf::Color::Yellow);
-        m_exitButton.setFillColor(sf::Color::White);
+        endretry.setFillColor(sf::Color::Red);
+        endexit.setFillColor(sf::Color::Black);
     }
     else
     {
-        m_exitButton.setFillColor(sf::Color::Yellow);
-        m_retryButton.setFillColor(sf::Color::White);
+        endexit.setFillColor(sf::Color::Red);
+        endretry.setFillColor(sf::Color::Black);
     }
 
-    if (m_isRetryButtonPressed)
+    if (endretryPressed)
     {
         context->states->Add(std::make_unique<GamePlay>(context), true);
     }
-    else if (m_isExitButtonPressed)
+    else if (endexitPressed)
     {
         context->window->close();
     }
@@ -124,9 +132,10 @@ void gameover::Update(sf::Time deltaTime)
 
 void gameover::Draw()
 {
-    context->window->clear(sf::Color::Blue);
-    context->window->draw(m_gameOverTitle);
-    context->window->draw(m_retryButton);
-    context->window->draw(m_exitButton);
+    context->window->clear(sf::Color::Red);
+    context->window->draw(endsprite);
+    context->window->draw(endTitle);
+    context->window->draw(endretry);
+    context->window->draw(endexit);
     context->window->display();
 }

@@ -15,8 +15,9 @@ class mainmenu : public GameEngine::GameState
     sf::Text title;
     sf::Text play;
     sf::Text exit;
-    sf::Text instructions;
+    sf::Text instructionsa;
     sf::Sprite sprite;
+ 
 
     bool isPlay;
     bool isExit;
