@@ -156,29 +156,29 @@ void GamePlay::Update(sf::Time deltaTime)
                 context->states->Add(std::make_unique<gameover>(context), true);
                 break;
             }
-        }
+        
 
-        if(chaser.IsOn(snek))
-        {
-            context->states->Add(std::make_unique<gameover>(context),true);
-            
-        }
+            if(chaser.IsOn(snek))
+            {
+                context->states->Add(std::make_unique<gameover>(context),true);
+                break;
+            }
 
-        // sf::FloatRect wallzero = walls[0].getLocalBounds();
-        // Rect
-        for (auto& wall : walls)
-        {
             if(snek.getPosition().x > (975 -snek.getLocalBounds().width) || snek.getPosition().y >(800 - snek.getLocalBounds().height))
             {
                 context->states->Add(std::make_unique<gameover>(context),true);
                 break;
             }
+
+            if(snek.getPosition().x == 0 || snek.getPosition().y == 0)
+            {
+                context->states->Add(std::make_unique<gameover>(context),true);
+                break;
+            }
+            
         }
-        
-        // if(snek().getGlobalBounds().intersecti)
-    }
-    // snek.setPosition((sf::Mouse::getPosition(context->window).x), (sf::Mouse::getPosition(context->window).y));
-   
+
+
 }
 void GamePlay::Draw()
 {

@@ -36,21 +36,4 @@ void Game::Run()
             context->states->GetCurrent()->Draw();
         }
     }
-
-
-//     while (context->window->isOpen())
-//     {
-//         sf::Event event;
-//         while (context->window->pollEvent(event))
-//         {
-//             if (event.type == sf::Event::Closed)
-//                 context->window->close();
-//         }
-
-//         context->window->clear();
-//         context->window->draw(shape);
-//         context->window->display();
-//     }
-
-
 }

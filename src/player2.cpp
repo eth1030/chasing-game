@@ -14,11 +14,6 @@ Player::Player(sf::Vector2f position)
     life = true;
 }
 
-// void Player::move(sf::Vector2f &direction)
-// {
-//     sf::RenderWindow &window
-//     pDot.setPosition((sf::Mouse::getPosition(window).y), (sf::Mouse::getPosition(window).y));
-// }
 
 void Player::draw(sf::RenderWindow &window)
 {
