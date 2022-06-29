@@ -44,7 +44,7 @@ void gameover::Init()
     endexit.setCharacterSize(50);
 
     // image
-    context->assets->AddTexture(sad, "assets/textures/end.jpg");
+    context->assets->AddTexture(sad, "assets/textures/end.PNG");
     endsprite.setTexture(context->assets->GetTexture(sad));
     endsprite.setScale(context->window->getSize().x/endsprite.getLocalBounds().width, context->window->getSize().y/endsprite.getLocalBounds().height);
     endsprite.setOrigin(endsprite.getLocalBounds().width/2,endsprite.getLocalBounds().height/2);
