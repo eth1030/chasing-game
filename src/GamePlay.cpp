@@ -5,7 +5,6 @@
 #include <SFML/Graphics/Texture.hpp>
 #include <SFML/Graphics/Sprite.hpp>
 #include <SFML/Graphics/Drawable.hpp>
-// #include <Rect.hpp>
 
 GamePlay::GamePlay(std::shared_ptr<Context> &context)
     : context(context), chaserDirection({0.f, 0.f}), m_elapsedTime(sf::Time::Zero)
@@ -31,8 +30,6 @@ void GamePlay::Init()
     snek.setTexture(context->assets->GetTexture(s));
     snek.setPosition(context->window->getSize().x - 100, context->window->getSize().y - 100);
 
-    // context->assets->AddTexture(CHASED, "assets/texture/chaseddd.png");
-    // chased.cdInit(context->assets->GetTexture(CHASED));
 
     context->assets->AddTexture(BORDER, "assets/textures/border.png.png", true);
 
@@ -62,7 +59,6 @@ void GamePlay::ProcessInput()
             
             
             sf::Vector2f newDirection = chaserDirection;
-            // sf::Vector2f cdnewDirection = chasedDirection;
 
             if(sf::Keyboard::isKeyPressed(sf::Keyboard::A))
             {
@@ -102,21 +98,6 @@ void GamePlay::ProcessInput()
             case sf::Keyboard::Right:
                 newDirection = {16.f, 0.f};
                 break;
-            // case sf::Keyboard::A:
-            //     snek.move(-16.f, 0.f);
-            //     break;
-            // case sf::Keyboard::D:
-            //     snek.move(16.f, 0.f);
-            //     break;
-            // case sf::Keyboard::W:
-            //     snek.move(0.f, -16.f);
-            //     break;
-            // case sf::Keyboard::S:
-            //     snek.move(0.f, 16.f);
-            //     break;
-            // case sf::Keyboard::Escape:
-            //     context->states->Add(std::make_unique<PauseGame>(m_context));
-            //     break;
 
             default:
                 break;
@@ -130,14 +111,6 @@ void GamePlay::ProcessInput()
     }
     }
 }
-
-
-
-
-
-
-
-
 
 void GamePlay::Update(sf::Time deltaTime)
 {
@@ -156,7 +129,6 @@ void GamePlay::Update(sf::Time deltaTime)
                 context->states->Add(std::make_unique<gameover>(context), true);
                 break;
             }
-        
 
             if(chaser.IsOn(snek))
             {
@@ -170,7 +142,7 @@ void GamePlay::Update(sf::Time deltaTime)
                 break;
             }
 
-            if(snek.getPosition().x == 0 || snek.getPosition().y == 0)
+            if(snek.getPosition().x <= 0 || snek.getPosition().y <= 0)
             {
                 context->states->Add(std::make_unique<gameover>(context),true);
                 break;
