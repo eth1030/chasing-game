@@ -1,5 +1,5 @@
-# Predator & Prey Game
-Two player chasing game ~ 
+# Predator & Prey Game  
+Two player chasing game ~  
 Can you out-smart the other player?
 
 ## Dependencies
@@ -7,7 +7,7 @@ Can you out-smart the other player?
 - Make
 
 ## Installation
-**Linux**
+**Linux**  
 Install make and sfml
 ```
 $ sudo apt-get install make
@@ -28,5 +28,5 @@ $ bin/main
 ```
 
 ## Authors
-Jacob Chin, Emika Hammond, Nuo Lin, Richard Yang 
+Jacob Chin, Emika Hammond, Nuo Lin, Richard Yang  
 2022
