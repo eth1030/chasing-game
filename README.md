@@ -1,11 +1,13 @@
 # Predator & Prey Game
+Two player chasing game ~
+Can you out-smart the other player?
 
 ## Dependencies
 - SFML
 - Make
 
 ## Installation
-*Linux*
+**Linux**
 Install make and sfml
 ```
 $ sudo apt-get install make
@@ -15,7 +17,7 @@ Download the files with the command
 ```
 $ git clone https://github.com/eth1030/chasing-game.git
 ```
-Compile with the command
+and compile
 ```
 $ make
 ```
