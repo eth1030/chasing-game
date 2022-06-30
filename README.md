@@ -1,5 +1,6 @@
 # Predator & Prey Game
 Two player chasing game ~
+
 Can you out-smart the other player?
 
 ## Dependencies
@@ -29,3 +30,4 @@ $ bin/main
 
 ## Authors
 Jacob Chin, Emika Hammond, Nuo Lin, Richard Yang
+2022
