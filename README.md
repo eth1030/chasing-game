@@ -1,29 +1,28 @@
 # Predator & Prey Game
 
 ## Dependencies
-- Linux
 - SFML
 - Make
 
 ## Installation
+*Linux*
 Install make and sfml
 ```
-sudo apt install make
-sudo apt install libsfml-dev
-
+$ sudo apt-get install make
+$ sudo apt-get install libsfml-dev
 ```
-Download the files by typing 
+Download the files with the command
 ```
-git clone https://github.com/eth1030/polkadot.git
+$ git clone https://github.com/eth1030/chasing-game.git
 ```
-Compile the game by typing
+Compile with the command
 ```
-make
+$ make
 ```
 ## Play the Game!
 Run the game using the command
 ```
-bin/main
+$ bin/main
 ```
 
 ## Authors
