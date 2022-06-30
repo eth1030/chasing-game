@@ -19,6 +19,7 @@ $ git clone https://github.com/eth1030/chasing-game.git
 ```
 and compile
 ```
+$ cd chasing-game
 $ make
 ```
 ## Play the Game!
