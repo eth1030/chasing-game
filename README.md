@@ -26,6 +26,7 @@ Run the game using the command
 ```
 $ bin/main
 ```
+Navigate the game menu with the arrow keys + Enter key
 
 ## Authors
 Jacob Chin, Emika Hammond, Nuo Lin, Richard Yang  
