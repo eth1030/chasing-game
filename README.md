@@ -31,4 +31,4 @@ Navigate the game menu with the arrow keys + Enter key
 
 ## Authors
 Jacob Chin, Emika Hammond, Nuo Lin, Richard Yang  
-2022
+EC327 Summer 2022
